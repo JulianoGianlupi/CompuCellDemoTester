@@ -3,6 +3,6 @@
 
 for /r %%f in (*.cc3d) do ( 
 	call .\runScript.bat -i %%f --noOutput -f 100000000000 --exitWhenDone &\
-	@echo %%f                   %ERRORLEVEL% >> testResults.txt
+	@echo %%~nf                   %ERRORLEVEL% >> testResults.txt
 )
 exit /b
